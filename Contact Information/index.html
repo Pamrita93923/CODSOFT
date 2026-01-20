@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Book</h1>
+
+        <!-- Add / Update Contact Form -->
+        <div class="form-container">
+            <input type="hidden" id="contactId">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="phone" placeholder="Phone Number">
+            <input type="email" id="email" placeholder="Email">
+            <input type="text" id="address" placeholder="Address">
+            <button id="saveBtn">Add Contact</button>
+        </div>
+
+        <!-- Search -->
+        <input type="text" id="search" placeholder="Search by name or phone">
+
+        <!-- Contact List -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="contactList">
+                <!-- Contacts will appear here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

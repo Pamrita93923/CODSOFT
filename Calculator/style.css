@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background:blueviolet/* light background */
+}
+
+.calculator {
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    background:#e9f7ef;
+    transition: all 0.3s ease;
+}
+
+.calculator h2 {
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+/* Inputs and select */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #f8f9fa; /* light grey input */
+    color: #333;
+}
+
+input:focus, select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    transform: scale(1.02);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #007BFF; /* primary blue button */
+    color: white;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3; /* darker blue on hover */
+    transform: scale(1.05);
+}
+
+/* Result box */
+.result {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 12px;
+    min-height: 24px;
+    transition: all 0.3s ease;
+    background: #e9f7ef; /* soft green background for result */
+    color: #155724; /* dark green text */
+    cursor: pointer;
+}
+
+/* Highlight result when clicked */
+.result.highlight {
+    box-shadow: 0 0 15px 3px rgba(40, 167, 69, 0.5); /* green glow */
+    transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 20px 15px;
+    }
+
+    input, select, button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .result {
+        font-size: 18px;
+    }
+}
